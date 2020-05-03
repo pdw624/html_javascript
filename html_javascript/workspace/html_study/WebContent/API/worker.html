@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Web Workers </title> 
+</head> 
+ 
+<body> 
+<p> 
+	<label for="worker-start-value"> 
+		<strong>Start value</strong>
+	</label><br> 
+	<input type="text" id="worker-start-value" value="0"> 
+</p> 
+<p>	
+	<input id="start-worker" type="button" value="Start Worker"> 
+	<input id="stop-worker" type="button" value="Stop Worker"> 
+</p> 
+<h3>Web Worker results:</h3> 
+<p id="worker-results"> (not started yet)</p> 
+<script> 
+(function () {
+	var worker;
+	function createWorker () {
+		worker = new Worker("worker.js");
+	}
+	
+	document.getElementById("start-worker").onclick = function () {
+		//워커를 만든 후 worker-start-value의   value를 메세지로 보낸다
+						
+		worker.onmessage = function (event) {
+		//워커로 부터 받은 event의 data를 worker-result에 innerHTML로 표시한다
+		};
+		worker.onerror = function (event) {
+			document.getElementById("worker-results").innerHTML = "An error occurred";
+		};
+	};
+						
+	document.getElementById("stop-worker").onclick = function () {
+		if (worker) {
+			// 워커를 terminate로 종료한다
+		}
+	};
+})();
+</script> 
+</body> 
+</html>

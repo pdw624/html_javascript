@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function setWidth(){
+	var img = document.getElementById('mying');
+	var input = document.getElementById('in_w');
+	var width = input.value;
+	img.setAttribute('width', width);
+}
+function getWidth(){
+	var img = document.getElementById('mying');
+	var out = img.getAttribute('width');
+	document.getElementById('out_w').innerHTML = out;
+}
+</script>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<img id='mying' src='boracay2.jpg' width='300' height='200'>
+	<p></p>
+	<button id='set' onclick='setWidth()'>set width</button>
+	<input id='in_w' type='text'></input>
+	<button id='get' onclick='getWidth()'>get width</button>
+	<div id='out_w'></div>
+	<p id='output'></p>
+</body>
+</html>

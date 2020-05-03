@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<title>캔버스테스트</title>
+		<style type="text/css">
+		canvas{
+			border: 1px solid #999;
+		}	
+		</style>
+<script type="application/javascript">
+	function draw_m(){
+		var c = document.getElementById("m");
+		var ctx = c.getContext("2d");
+		
+		var img = new Image();
+		img.onload=function(){
+			ctx.drawImage(img,0,0, 100, 100);
+		}
+		
+		img.src = "image/flw.jpg";
+	}
+	
+</script>
+	</head>
+<body onload="draw_m()">
+	<canvas id="m" width="300" height="300"></canvas>
+</body>
+</html>

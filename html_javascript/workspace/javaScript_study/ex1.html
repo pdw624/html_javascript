@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>생성자</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+function Contacts(name, email, phone){
+	this.name = name;
+	this.email = email;
+	this.phone = phone;
+	
+	this.getEmail = function(){
+		return this.Email;
+	};
+	this.getPhoneNum = function(){
+		return this.phone;
+	};
+	this.getContact = function(){
+		return this.name +'\n'+this.email+'\n'+this.phone;
+	};
+}
+var addr1 = new Contacts('jennifer', 'jenn@email.net', '0123456');
+alert(addr1.getContact());
+</script>
+</html>

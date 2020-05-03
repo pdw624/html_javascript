@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+#boxA, #boxB, #boxC { 
+  float:left; width:200px; height:200px; padding:10px; margin:10px;
+}
+
+#boxA { background-color: yellow; }
+#boxB { border: 2px solid red;}
+#boxC { border:2px solid blue; }
+
+/* 2번 */
+</style>
+<script type="text/javascript">
+function dragStart(ev) {
+//3번
+    return true;
+}
+
+function dragEnter(ev) {
+    return true;
+}
+
+function dragOver(ev) {
+//4번
+        return false;
+
+}
+
+function dragDrop(ev) {
+//5번
+    return false; 
+}
+
+function dragEnd(ev) {
+//6번
+    return true
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+    <div id="boxA"
+        ondragenter="return dragEnter(event)"
+        ondrop="return dragDrop(event)"
+        ondragover="return dragOver(event)">
+
+<!--       
+      1번
+ -->
+    </div>
+
+    <div id="boxB"
+        ondragenter="return dragEnter(event)"
+        ondrop="return dragDrop(event)"
+        ondragover="return dragOver(event)">
+    </div>
+    <div id="boxC"
+        ondragenter="return dragEnter(event)"
+        ondrop="return dragDrop(event)"
+        ondragover="return dragOver(event)">
+    </div>
+
+</body>
+</html>

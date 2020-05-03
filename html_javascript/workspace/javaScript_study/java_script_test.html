@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sumAll(arguments){
+		alert(typeof (arguments) + ': '+ arguments.length);
+		FunA();	
+	}
+var FunA = function(){
+	var output = prompt('이름을 입력하세요', name);
+	alert(output);
+};
+var object = {
+		subject:'수학',
+		message: function (grade){
+			alert(this.subject + ': '+ grade +'점');
+		}
+};
+object.message(95);
+
+var contact ={
+		name:'홍길동',
+		phone: '01234567',
+		email: 'homg@mail.net',
+		address: 'seoul, korea'
+};
+var output = ''
+for(var key in contact){
+	output += key + ': ' + contact[key]+'\n';
+}
+alert(output)
+</script>
+</head>
+<body onload="sumAll('hello')">
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function changeText(element){
+	element.innerHTML='click event';
+}
+function changeBlack(obj){
+	obj.style.backgroundColor='#000000';
+	obj.innerHTML='Release Me'
+}
+function changeBlack(obj){
+	obj.style.backgroundColor='#D94A38';
+	obj.innerHTML='Thank you'
+}
+
+
+</script>
+<div onmouseover='changeBlack(this)' onmouseout='changeRed(this)'
+	style= 'background-color:#D94A38;
+		width: 120px; height: 30px;
+		padding: 10px;
+		font-size: 20px;
+		color:#ffffff;'>
+		hello world</div>
+<h1 onclick='changeText(this)'>hello world</h1>
+</body>
+</html>
